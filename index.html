@@ -1,0 +1,18 @@
+<meta charset="utf8" />
+<script>
+    const emojis = [];
+    for (let codePoint = 0x1F400; codePoint < 0x1F4F0; codePoint += 1) {
+        emojis.push(String.fromCodePoint(codePoint));
+    }
+
+    const numberOfImages = Math.floor(Math.random() * (10 - 5) + 5);
+    for (let i = 0; i < numberOfImages; i += 1) {
+        const emoji = emojis[Math.floor(Math.random() * emojis.length)];
+        document.write(emoji);
+    }
+</script>
+<style>
+    body {
+        font-size: 400%;
+    }
+</style>
