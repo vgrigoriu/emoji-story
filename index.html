@@ -5,10 +5,14 @@
         emojis.push(String.fromCodePoint(codePoint));
     }
 
-    const numberOfImages = Math.floor(Math.random() * (10 - 5) + 5);
-    for (let i = 0; i < numberOfImages; i += 1) {
-        const emoji = emojis[Math.floor(Math.random() * emojis.length)];
-        document.write(emoji);
+    const numberOfLines = Math.floor(Math.random() * 3 + 1);
+    for (let line = 0; line < numberOfLines; line += 1) {
+        const numberOfImages = Math.floor(Math.random() * (10 - 5) + 5);
+        for (let i = 0; i < numberOfImages; i += 1) {
+            const emoji = emojis[Math.floor(Math.random() * emojis.length)];
+            document.write(emoji);
+        }
+        document.write('<br/>');
     }
 </script>
 <style>
